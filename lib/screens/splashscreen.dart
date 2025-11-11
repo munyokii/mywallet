@@ -1,30 +1,27 @@
-// Importing necessary packages and files.
-import 'package:flutter/material.dart'; // Flutter's material design package for UI components.
-import 'package:mywallet/classes/homecontent.dart';
+import 'package:flutter/material.dart';
+import 'package:mywallet/screens/loginscreen.dart';
 
-// Splashscreen widget represents the splash screen of the app.
 class Splashscreen extends StatefulWidget {
-  const Splashscreen({super.key});
+  const Splashscreen({Key? key}) : super(key: key);
 
   @override
-  _SplashscreenState createState() => _SplashscreenState(); // Creates the state for the Splashscreen widget.
+  _SplashscreenState createState() => _SplashscreenState();
 }
 
-// State class for the Splashscreen widget.
 class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade900, // Background color matching the app theme.
+        backgroundColor: Colors.blue.shade900,
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Centers the content vertically.
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _topImageSection(), // Displays the top image section.
-            const SizedBox(height: 24), // Spacing between sections.
-            _middleScreenText(), // Displays the middle text section.
-            const SizedBox(height: 32), // Spacing between sections.
-            _splashButton(context), // Displays the "Get Started" button.
+            _topImageSection(),
+            const SizedBox(height: 24),
+            _middleScreenText(),
+            const SizedBox(height: 32),
+            _splashButton(context),
           ],
         ),
       ),
@@ -32,65 +29,61 @@ class _SplashscreenState extends State<Splashscreen> {
   }
 }
 
-// Top Image Section
 Widget _topImageSection() {
   return Container(
-    padding: const EdgeInsets.all(16.0), // Padding around the image.
+    padding: const EdgeInsets.all(16.0),
     child: Center(
       child: Image.asset(
-        "assets/images/bank_wallet.png", // Path to the image asset.
-        width: 200, // Width of the image.
-        height: 200, // Height of the image.
+        "assets/images/bank_wallet.png", // Update with a relevant banking image
+        width: 200,
+        height: 200,
       ),
     ),
   );
 }
 
-// Middle Screen Text Section
 Widget _middleScreenText() {
   return const Column(
     children: [
       Text(
-        "My Pocket Wallet", // Main title text.
+        "My Pocket Wallet",
         style: TextStyle(
-          fontSize: 24, // Font size.
-          fontWeight: FontWeight.bold, // Bold font weight.
-          color: Colors.white, // Text color.
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
         ),
       ),
-      SizedBox(height: 10), // Spacing between texts.
+      SizedBox(height: 10),
       Text(
-        "Your secure digital wallet for easy transactions", // Subtitle text.
-        textAlign: TextAlign.center, // Center-align the text.
+        "Your secure digital wallet for easy transactions",
+        textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: 16, // Font size.
-          color: Colors.white70, // Text color with opacity.
+          fontSize: 16,
+          color: Colors.white70,
         ),
       ),
     ],
   );
 }
 
-// Splash Button Section
 Widget _splashButton(BuildContext context) {
   return ElevatedButton(
     style: ElevatedButton.styleFrom(
-      backgroundColor: Colors.orangeAccent, // Button background color.
+      backgroundColor: Colors.orangeAccent,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30), // Rounded corners for the button.
+        borderRadius: BorderRadius.circular(30),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12), // Button padding.
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
     ),
     onPressed: () {
-      // Action to perform when the button is pressed.
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const Homecontent()), // Navigates to the DashboardPage.
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     },
     child: const Text(
-      "Get Started", // Button text.
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), // Button text style.
+      "Get Started",
+      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
     ),
   );
 }
