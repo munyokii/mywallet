@@ -1,37 +1,32 @@
-// Importing necessary packages and files.
-//import 'package:firebase_core/firebase_core.dart'; // Firebase core package for initializing Firebase.
-import 'package:flutter/material.dart'; // Flutter's material design package for UI components.
+// ignore_for_file: library_private_types_in_public_api
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:mywallet/classes/homecontent.dart';
-//import 'package:my_pocket_wallet/firebase_options.dart'; // Firebase configuration options.
-import 'package:mywallet/screens/splashscreen.dart';
+import 'package:mywallet/firebase_options.dart';
+import 'package:mywallet/screens/splashscreen.dart'; // Importing the Material package.
 
-
-// The main function is the entry point of the Flutter application.
 void main() async {
-  // Initialize Firebase before running the app.
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform, // Use the default Firebase options for the current platform.
-  // );
-  // Run the app by calling the MyPocketWallet widget.
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyPocketWallet());
 }
 
 // Root widget for the app.
 class MyPocketWallet extends StatelessWidget {
-  const MyPocketWallet({super.key}); // Constructor for the MyPocketWallet widget.
+  const MyPocketWallet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // The build method describes the part of the user interface represented by this widget.
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Hides the debug banner in the top-right corner.
-      title: 'My Pocket Wallet', // Title of the app.
-      theme: ThemeData(primarySwatch: Colors.blue), // Define the default theme for the app.
-      initialRoute: '/', // The initial route when the app starts.
+      debugShowCheckedModeBanner: false,
+      title: 'My Pocket Wallet',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
       routes: {
-        // Define the routes for the app.
-        '/': (context) => const Splashscreen(), // The root route, which shows the splash screen.
-        '/home': (context) => const Homecontent(), // The home route, which shows the home content.
+        '/': (context) => const Splashscreen(),
+        '/home': (context) =>  const Homecontent(),
         // Add more routes as needed
       },
     );
