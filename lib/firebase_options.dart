@@ -23,10 +23,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
@@ -44,38 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCU3MG5IWarDhpT73dSFZc6quzvLDhcPWQ',
-    appId: '1:435257793979:web:a240cb7da62520cde9b89e',
-    messagingSenderId: '435257793979',
-    projectId: 'mywallet-abf4b',
-    authDomain: 'mywallet-abf4b.firebaseapp.com',
-    storageBucket: 'mywallet-abf4b.firebasestorage.app',
+    apiKey: 'AIzaSyDsDq3vNVjuiTu7qKdLyr6Y3M1LUPdVYCw',
+    appId: '1:957442523918:web:a13fe7389cbffb9ebe4d5f',
+    messagingSenderId: '957442523918',
+    projectId: 'mywallet-5bdb3',
+    authDomain: 'mywallet-5bdb3.firebaseapp.com',
+    storageBucket: 'mywallet-5bdb3.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCU3MG5IWarDhpT73dSFZc6quzvLDhcPWQ',
-    appId: '1:435257793979:android:b223ba96565ae220e9b89e',
-    messagingSenderId: '435257793979',
-    projectId: 'mywallet-abf4b',
-    storageBucket: 'mywallet-abf4b.firebasestorage.app',
+    apiKey: 'AIzaSyBDQo0ujgRmq_yxjrZSIqM1DCpSF1jBO3o',
+    appId: '1:957442523918:android:78df9de834812f9fbe4d5f',
+    messagingSenderId: '957442523918',
+    projectId: 'mywallet-5bdb3',
+    storageBucket: 'mywallet-5bdb3.firebasestorage.app',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBWMfLN6-TVgqQHeRVDP0_S7V7haTXvKPQ',
+    appId: '1:957442523918:ios:241a485b791e1185be4d5f',
+    messagingSenderId: '957442523918',
+    projectId: 'mywallet-5bdb3',
+    storageBucket: 'mywallet-5bdb3.firebasestorage.app',
+    iosBundleId: 'com.example.mywallet',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCU3MG5IWarDhpT73dSFZc6quzvLDhcPWQ',
-    appId: '1:435257793979:ios:18a9878bc5a6ad40e9b89e',
-    messagingSenderId: '435257793979',
-    projectId: 'mywallet-abf4b',
-    storageBucket: 'mywallet-abf4b.firebasestorage.app',
-    iosBundleId: 'my-wallet.ios',
+    apiKey: 'AIzaSyBWMfLN6-TVgqQHeRVDP0_S7V7haTXvKPQ',
+    appId: '1:957442523918:ios:241a485b791e1185be4d5f',
+    messagingSenderId: '957442523918',
+    projectId: 'mywallet-5bdb3',
+    storageBucket: 'mywallet-5bdb3.firebasestorage.app',
+    iosBundleId: 'com.example.mywallet',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBcrHh-3zo9SD05GCEJU6RqDGk6_duGHMA',
-    appId: '1:435257793979:web:a240cb7da62520cde9b89e',
-    messagingSenderId: '435257793979',
-    projectId: 'mywallet-abf4b',
-    authDomain: 'mywallet-abf4b.firebaseapp.com',
-    storageBucket: 'mywallet-abf4b.firebasestorage.app',
+    apiKey: 'AIzaSyDsDq3vNVjuiTu7qKdLyr6Y3M1LUPdVYCw',
+    appId: '1:957442523918:web:a4a07ea31c8a9be1be4d5f',
+    messagingSenderId: '957442523918',
+    projectId: 'mywallet-5bdb3',
+    authDomain: 'mywallet-5bdb3.firebaseapp.com',
+    storageBucket: 'mywallet-5bdb3.firebasestorage.app',
   );
-
 }

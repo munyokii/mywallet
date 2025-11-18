@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "435257793979",
-    "project_id": "mywallet-abf4b",
-    "storage_bucket": "mywallet-abf4b.firebasestorage.app"
+    "project_number": "957442523918",
+    "project_id": "mywallet-5bdb3",
+    "storage_bucket": "mywallet-5bdb3.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:435257793979:android:f40eb4124fecb86be9b89e",
+        "mobilesdk_app_id": "1:957442523918:android:78df9de834812f9fbe4d5f",
         "android_client_info": {
           "package_name": "com.example.mywallet"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB4M7fDU-bZnwLkCVNXxVwtXWRIpq9bf80"
+          "current_key": "AIzaSyBDQo0ujgRmq_yxjrZSIqM1DCpSF1jBO3o"
         }
       ],
       "services": {

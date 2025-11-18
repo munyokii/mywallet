@@ -7,15 +7,16 @@ import 'package:mywallet/firebase_options.dart';
 import 'package:mywallet/screens/splashscreen.dart'; // Importing the Material package.
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyPocketWallet());
+  runApp(const MyWallet());
 }
 
 // Root widget for the app.
-class MyPocketWallet extends StatelessWidget {
-  const MyPocketWallet({super.key});
+class MyWallet extends StatelessWidget {
+  const MyWallet({super.key});
 
   @override
   Widget build(BuildContext context) {
