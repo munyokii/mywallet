@@ -8,7 +8,6 @@ class Splashscreen extends StatefulWidget {
   _SplashscreenState createState() => _SplashscreenState();
 }
 
-// 1. Add SingleTickerProviderStateMixin for animations
 class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _fadeAnimation;
@@ -18,10 +17,9 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
   void initState() {
     super.initState();
     
-    // 2. Initialize the AnimationController
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1500), // Animation takes 1.5 seconds
+      duration: const Duration(milliseconds: 1500),
     );
 
     // Define the Fade (0.0 to 1.0 opacity)
@@ -29,21 +27,19 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
       CurvedAnimation(parent: _controller, curve: Curves.easeIn),
     );
 
-    // Define the Slide (from slightly bottom to center)
     _slideAnimation = Tween<Offset>(
-      begin: const Offset(0, 0.2), // Starts 20% down
+      begin: const Offset(0, 0.2),
       end: Offset.zero,
     ).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeOut),
     );
 
-    // Start the animation
     _controller.forward();
   }
 
   @override
   void dispose() {
-    _controller.dispose(); // Always dispose controllers to prevent memory leaks
+    _controller.dispose();
     super.dispose();
   }
 
@@ -69,7 +65,6 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-            // 3. Wrap the content in Slide and Fade transitions
             child: SlideTransition(
               position: _slideAnimation,
               child: FadeTransition(
